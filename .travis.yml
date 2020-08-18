@@ -7,7 +7,7 @@ env:
 
 script:
   - docker build --pull --tag "$IMAGE_NAME" .
-  - docker run "$IMAGE_NAME" aws | grep aws
+  - docker run "$IMAGE_NAME" "aws help" | grep aws
 
 after_script:
   - docker images
