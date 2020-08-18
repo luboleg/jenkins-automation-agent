@@ -7,7 +7,6 @@ env:
 
 script:
   - docker build --pull --tag "$IMAGE_NAME" .
-  - docker run "$IMAGE_NAME" /bin/bash  | grep automation
 
 after_script:
   - docker images
