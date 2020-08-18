@@ -7,7 +7,7 @@ env:
 
 script:
   - docker build --pull --tag "$IMAGE_NAME" .
-  - docker run "$IMAGE_NAME" "ansible --version" | grep ansible
+  - docker run "$IMAGE_NAME" pwd  | grep pwd
 
 after_script:
   - docker images
