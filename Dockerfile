@@ -17,7 +17,7 @@ RUN ./aws/install -i /usr/local/aws-cli -b /usr/local/bin
 #Install Gradle
 
 RUN wget --directory-prefix=/opt/ "https://services.gradle.org/distributions/gradle-4.10.2-bin.zip"
-RUN unzip /opt/gradle-4.10.2-bin.zip
+RUN unzip /opt/gradle-4.10.2-bin.zip -d /opt/gradle-4.10.2-bin
 RUN ln -s /opt/gradle-4.10.2-bin/bin/gradle /usr/local/bin/gradle
 
 # Switch back to the jenkins user.
