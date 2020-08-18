@@ -14,6 +14,12 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
 RUN unzip awscliv2.zip
 RUN ./aws/install -i /usr/local/aws-cli -b /usr/local/bin
 
+#Install Gradle
+
+RUN curl "https://services.gradle.org/distributions/gradle-4.10.3-all.zip" -o "gradle.zip"
+RUN unzip gradle.zip
+RUN ln -s ./gradle/gradle /usr/local/bin/gradle
+
 # Switch back to the jenkins user.
 
 USER jenkins
