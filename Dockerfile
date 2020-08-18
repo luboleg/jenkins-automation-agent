@@ -18,7 +18,7 @@ RUN ./aws/install -i /usr/local/aws-cli -b /usr/local/bin
 
 RUN wget  "https://services.gradle.org/distributions/gradle-4.10.2-bin.zip"
 RUN unzip gradle-4.10.2-bin.zip
-RUN ln -s ./gradle-4.10.2-bin/gradle /usr/local/bin/gradle
+RUN ln -s `pwd`/gradle-4.10.2-bin/bin/gradle /usr/local/bin/gradle
 
 # Switch back to the jenkins user.
 
