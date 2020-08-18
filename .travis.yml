@@ -7,7 +7,7 @@ env:
 
 script:
   - docker build --pull --tag "$IMAGE_NAME" .
-  - docker run "$IMAGE_NAME" "aws help" | grep aws
+  - docker run "$IMAGE_NAME" "ansible" | grep ansible
 
 after_script:
   - docker images
