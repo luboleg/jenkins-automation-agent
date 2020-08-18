@@ -12,7 +12,7 @@ RUN apt install ansible -y
 # Install AWS Cli
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 RUN unzip awscliv2.zip
-RUN sudo ./aws/install -i /usr/local/aws-cli -b /usr/local/bin
+RUN ./aws/install -i /usr/local/aws-cli -b /usr/local/bin
 
 # Switch back to the jenkins user.
 
