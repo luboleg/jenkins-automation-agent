@@ -5,6 +5,7 @@ USER root
 
 #Install Python and modules
 RUN python -m pip install boto3
+
 # Install Ansible
 RUN echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main" > /etc/apt/sources.list.d/ansible.list
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
