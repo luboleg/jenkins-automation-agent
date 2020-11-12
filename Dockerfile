@@ -22,6 +22,6 @@ RUN ln -s /opt/gradle-4.10.2-bin/bin/gradle /usr/local/bin/gradle
 
 #Install Python and modules
 RUN apt install python-pip  -y
-RUN python -m pip install nose && python -m pip install tornado && python -m  pip install boto3
+RUN python -m pip install nose && python -m pip install tornado && python -m  pip install boto
 
 USER jenkins
