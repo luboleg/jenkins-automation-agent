@@ -21,7 +21,7 @@ RUN unzip /opt/gradle-4.10.2-bin.zip -d /opt
 RUN ln -s /opt/gradle-4.10.2-bin/bin/gradle /usr/local/bin/gradle
 
 #Install Python and modules
-RUN apt install python3-pip && pip install nose && pip install tornado --user &&  pip install boto3
+RUN apt install python3-pip  -y && pip install nose && pip install tornado --user &&  pip install boto3
 
 USER jenkins
 
